@@ -151,7 +151,7 @@ namespace TodoApi.Controllers
                 _repo.Delete(photoFromRepo);
             }  
 
-            if(photoFromRepo.PublicId != null)
+            if(photoFromRepo.PublicId == null)
                 _repo.Delete(photoFromRepo);  
 
             if(await _repo.SaveAll())
